@@ -1,6 +1,6 @@
 **Ubuntu Desktop with NICE DCV**
 
-patched *libdcv.so* for NICE DCV to generate *license.lic* with expiration date of *31-dec-2099*.
+patched *libdcv.so* for NICE DCV to generate *license.lic* on my RLM server.
 
 license server has been set to `5053@licensing.841973620.net`
 
