@@ -11,7 +11,8 @@ else
     PASSWD=$2
 fi
 
-useradd ${USERNAME}
+useradd ${USERNAME} -s /bin/bash
+usermod -aG sudo ${USERNAME}
 usermod -aG video ${USERNAME}
 echo "${USERNAME}:${PASSWD}" |chpasswd
 sed -i 's/USERNAME/'"${USERNAME}"'/g' /usr/lib/systemd/system/dcvserver.service
