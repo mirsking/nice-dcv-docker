@@ -5,7 +5,7 @@ Description=NICE DCV server daemon
 PermissionsStartOnly=true
 ExecStartPre=-/sbin/modprobe eveusb
 ExecStart=/usr/bin/dcvserver -d --service
-ExecStartPost=/usr/bin/dcv create-session --storage-root=%home% --owner USERNAME --user USERNAME virtual
+ExecStartPost=/usr/bin/dcv create-session --type=virtual --storage-root=%home% --owner USERNAME --user USERNAME USERNAME_session
 Restart=always
 BusName=com.nicesoftware.DcvServer
 User=dcv

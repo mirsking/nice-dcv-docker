@@ -11,6 +11,8 @@ else
     PASSWD=$2
 fi
 
+/usr/sbin/sshd -D &
+
 useradd ${USERNAME} -s /bin/bash
 usermod -aG sudo ${USERNAME}
 usermod -aG video ${USERNAME}
